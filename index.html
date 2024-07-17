@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Verma Furniture Works</title>
+        <link rel="stylesheet" href="Css/style.css">
+        <link rel="stylesheet" href="Css/responsive.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="navbar nav-background h-nav-resp">
+                <div class="leftnav">
+                    <div class="logo">
+                        <img src="image/logo.png" alt="Logo">
+                    </div>
+                    <div class="wrapper">
+                        <div class="search-input">
+                          <input type="text" placeholder="Type to search" />
+                          <div class="autocom-box">
+                          </div>
+                          <div class="searchIcon">
+                              <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <a id="show-login" href="#">Login</a>
+                    </div> 
+                    <div class="cartSec">
+                        <div class="container">
+                            <cartop>
+                                <div class="icon_cart">
+                                    <p class="cartIcon">Cart Icon</p>
+                                    <span>0</span>
+                                </div>
+                            </cartop>
+                        </div>
+                        <div class="cartTab">
+                            <h1>Shopping Cart</h1>
+                            <div class="listCart">    
+                            </div>
+                            <div class="total_money_text">
+                                <h4>Total Money -</h4>
+                                <p class="total_money"></p>
+                            </div>
+                            <div class="btn">
+                                <button class="close">Close</button>
+                                <button class="checkOut">Check Out</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightnav" id="rightnav">
+                    <li><a class="home" href="#">Home</a></li>
+                    <li><a class="workers" href="Workers/worker.html">Workers</a></li>
+                    <li><a class="developer" href="iPortfolio/index.html">Developer</a></li>
+                    <li><a class="contact" href="#contact_us">Contact Us</a></li>
+                    <!-- <li><a class="login" href="#sign-in">Feedback</a></li> -->
+                </div>
+                <div class="burger" id="burger">
+                    <i onclick="showslider()" class="fa-solid fa-bars" style="color: #4287ff;"></i>
+                </div>
+                <div class="cross" id="cross">
+                    <div class="cross-sign">
+                        <i onclick="hideslider()" class="fa-solid fa-xmark" style="color: #2764ce;"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- login and sign up section -->
+            <section class="login_section">
+                <div class="popup">
+                    <div class="close-btn">&times;</div>
+                    <form class="form sign_in_form">
+                        <h2>Log in</h2>
+                        <div class="form-element">
+                            <label for="email">Email / User Name / Phone</label>
+                            <input type="text"id="email_user_name_phone" name="email_user_name_phone" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter password" required>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <button id="signInBtn" type="submit">Sign in</button>
+                        </div>
+                        <div class="form-element">
+                            <a class="forget_password">Forget password</a>
+                        </div>
+                        <div class="form-element create_new">
+                            Create a new Account Here
+                        </div>
+                    </form>
+                    <form class="form create_account">
+                        <h2>Sign up</h2>
+                        <div class="form-element">
+                            <label for="name">Name</label>
+                            <input type="text" id="name"  name="first_name" placeholder="Enter name" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="email">Email</label>
+                            <input type="text" id="email name="email" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="phone">Phone</label>
+                            <input type="number" id="phone" name="phone" placeholder="Enter number" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="fav_sports">Favorite Sports</label>
+                            <input type="text" id="fav_sports" name="fav_sports" placeholder="Enter sports" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="password">Create Password</label>
+                            <input type="password" name="password" placeholder="Enter password" required>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <button id="signUpBtn" type="submit">Sign up</button>
+                        </div>
+                        <div class="form-element login_account">
+                            Already have an Account
+                        </div>
+                    </form>
+                    <form class="form forget_form" >
+                        <h2>Forget Password</h2>
+                        <div class="form-element">
+                            <label for="email">Email / User Name / Phone</label>
+                            <input type="text" id="email_user_name_phone" name="email_user_name_phone" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="fav_sports">Favorite Sports</label>
+                            <input type="text" id="fav_sports" name="fav_sports" placeholder="Enter sports" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="password">New Password</label>
+                            <input type="password" id="new_password" name="password" placeholder="Enter new password" required>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <button id="forgetBtn" type="submit">Forget</button>
+                        </div>
+                        <div class="form-element">
+                            <a class="cancel_forget">Cancel</a>
+                        </div>
+                        <div class="form-element create_new create_New">
+                            Create a new Account Here
+                        </div>
+                    </form>
+            </section>
+            <div class="main">
+                <section class="hero" id="hero">
+                    <img src="image/hero.png">
+                </section>
+
+                <!-- Images Cards -->
+                    <div class="full-img" id="fullImgBox">
+                        <h1 class="card_heading"></h1>
+                        <img id="fullImg" src="">
+                        <div class="waterMark">
+                            <p>Verma Furniture Works</p>
+                            <p>Contact No. 8607202852</p>
+                        </div>
+                        <span onclick="closeFullImg()">
+                            <i class="fa-solid fa-xmark" style="color: #fff;"></i>
+                        </span>
+                        <box class="buyOptions">
+                            <button id= "AddToCart" class="addCart"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+                            <p id="Price"></p>
+                            <button id= "buyNow"><i class="fa-solid fa-bag-shopping"></i>Buy Now</button>
+                        </box>
+                    </div>
+
+                <section class="category" >
+                    <h3>Category</h3>
+                    <div class="cat-section">
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Beds</h2>
+                            </div>
+                            <a href="Category/category.html?name=Bed"><img src="image/bed.jpg" name="Beds" ></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Tables</h2>
+                            </div>
+                            <a href="Category/category.html?name=Table"><img src="image/table.jpg" name="Table"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Almirah</h2>
+                            </div>
+                            <a href="Category/category.html?name=Almirah"><img src="image/almirah.jpg"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Dressing</h2>
+                            </div>
+                            <a href="Category/category.html?name=Dressing"><img src="image/dressing.jpg"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Doors</h2>
+                            </div>
+                            <a href="Category/category.html?name=Door"><img src="image/door.jpeg"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Sofa</h2>
+                            </div>
+                            <a href="Category/category.html?name=Sofa"><img src="image/sofa.jpg"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Windows</h2>
+                            </div>
+                            <a href="Category/category.html?name=Window"><img src="http://grhappyedges.com/wp-content/uploads/2021/03/window3.jpg"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                 <h2>LED back design</h2>
+                            </div>
+                            <a href="Category/category.html?name=Led"><img src="image/led.jpg"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Mandir</h2>
+                            </div>
+                            <a href="Category/category.html?name=Mandir"><img src="image/mandir.jpg"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Kitchen</h2>
+                            </div>
+                            <a href="Category/category.html?name=Kitchen"><img src="image/kitchen.jpg"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Stool</h2>
+                            </div>
+                            <a href="Category/category.html?name=Stool"><img src="https://m.media-amazon.com/images/I/51a-H1A+Q4L._AC_UF1000,1000_QL80_.jpg"></a>
+                        </div>
+                        <div class="box">
+                            <div class="cat-details">
+                                <h2>Shoe Rack</h2>
+                            </div>
+                            <a href="Category/category.html?name=ShoeRack"><img src="https://media.designcafe.com/wp-content/uploads/2021/01/27113933/contemporary-wooden-shoe-rack-design.jpg"></a>
+                        </div>
+                    </div>
+                </section>
+                <div class="moreImg">
+
+                </div>
+                
+                <!-- contact us -->
+
+                <section id="contact_us" class="contact-us"> 
+                        <div class="contact-heading">
+                            <h2>Contact Us</h2>
+                        </div>
+                        <div class="contact-details">
+                            <div class="details">
+                                <div class="owner-name contact-design">
+                                    <h4><i class="fa-solid fa-user"></i>Name :- Rajender Singh</h4>
+                                </div>
+                                <div class="phone contact-design">
+                                    <h4><i class="fa-solid fa-phone"></i>Phone :- <a href="tel:+918607202852">8607202852  Click me...</a></h4>
+                                </div>
+                                <div class="email-id contact-design">
+                                    <h4><i class="fa-solid fa-envelope"></i>Email :- vermafurnitureworks@gmail</h4>
+                                </div>
+                                <div class="location contact-design">
+                                    <h4><i class="fa-solid fa-location-dot"></i>Location :- V.P.O Thaska , Hisar</h4>
+                                </div>
+                            </div>
+                            <div class="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6317.384376602193!2d75.68745421703048!3d29.269031765569636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3913d3403769b387%3A0x3de10da1cd4b29b1!2sVerma%20Furniture%20Works!5e1!3m2!1sen!2sin!4v1699071708001!5m2!1sen!2sin"
+                                style="border:0;border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
+                            </div> 
+                        </div>   
+                             
+                    </div>            
+                </section>
+
+                <!--sign in section-->
+
+                <section class="feedback" id="feedback">
+                        <div class="feedback-heading">
+                            <h2>Feedback Form</h2>
+                        </div>
+                        <form  method="post" action="Form/action.php">
+                            <div class="form-table">
+                                <div class="row">
+                                    <h4>
+                                        First Name :
+                                    </h4>
+                                        <input type="text" class="form_data" name="fname" id="fname" placeholder="Enter your first name" required/>
+                                </div>
+                                <div class="row">  
+                                    <h4>
+                                        Last Name :
+                                    </h4>
+                                        <input type="text" class="form_data" name="lname" id="lname" placeholder="Enter your last name"/>
+                                </div>
+                                <div class=" row ">
+                                    <h4>
+                                        <h>Gender :</h>
+                                    </h4>
+                                    <div>
+                                        <div class="gender-option form_data">
+                                            <div class="gender">
+                                                <label id="1">
+                                                <input type="radio" value="male" name="gender"><b>Male</b>
+                                                </label>
+                                            </div>
+                                            <div class="gender form_data">
+                                                <label id="2">
+                                                <input type="radio" value="female" name="gender"><b>Female</b>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h4>
+                                        Email Id :
+                                    </h4>
+                                        <input type="email" class="email form_data" name="email" id="email" placeholder="Enter your Email Id" required/>
+                                </div>
+                                <div class="row">
+                                    <h4>
+                                        Message :
+                                    </h4>
+                                        <textarea class="message row form_data" name="message" id="message" placeholder="Enter your message here...."></textarea>
+                                </div>
+                                <div>
+                                    <div class="submit">
+                                        <button type="submit" id="submit">
+                                            <b>Submit</b>
+                                        </button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                </section>
+            </div>            
+        </main>   
+        <footer class="footer">
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social_icon">
+                <li ><a href="facebook.com"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="Instagram.com"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="Youtube.com"></a><ion-icon name="logo-youtube"></ion-icon></li>
+                <li><a href="goooglepay.com"><ion-icon name="qr-code-outline"></ion-icon></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a class="home" href="#home">Home</a></li>
+                <li><a class="workers" href="Workers/worker.html">Workers</a></li>
+                <li><a class="developer" href="iPortfolio/index.html">Developer</a></li>
+                <li><a class="contact" href="contact_us">Contact Us</a></li>
+                <li><a class="login" href="#sign-in">Feedback</a></li>
+            </ul>
+            <div class="count_text">
+                <p>Total Visitors</p>
+            </div>
+            <div class="counter">
+                <!-- hitwebcounter Code START -->
+                
+                <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=9809983&style=0019&nbdigits=5&type=ip&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>                                    
+                                                                    
+                                         
+            </div>
+            <p class="copyright">
+                Copyright &copy; 2023 www.VermaFurnitureWorks.com - All rights reserved
+            </p>
+        </footer>
+        <!-- <script src="Java_script/addToCart.js"></script> -->
+        <script>
+            // let listProductHTML = document.querySelector('.full-img');
+            let iconCart = document.querySelector('.icon_cart');
+            let closeCart = document.querySelector('.close');
+            let addToCartIcon = document.querySelector('.addCart');
+            let cartSec =document.querySelector('.cartSec');
+            let checkOut = document.querySelector('.checkOut');
+            let total_money = document.querySelector('.total_money');
+
+            // let listProductHTML = document.querySelector('.listProduct');
+            let listCartHTML = document.querySelector('.listCart');
+            let iconCartSpan = document.querySelector('.icon_cart span');
+
+            let listProducts = [];
+            let carts = [];
+
+            checkOut.addEventListener('click', ()=> {
+                console.log('Total Money');
+            })
+
+            iconCart.addEventListener('click', () => {
+                cartSec.classList.toggle('showCart');
+
+            });
+            closeCart.addEventListener('click', () => {
+                cartSec.classList.toggle('showCart')
+            });
+
+            
+            const addToCart = (product_id,product_img,product_price,total_money) => {
+                let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
+                // console.log(positionItemInCart);
+                console.log(carts);
+                if(carts.length <= 0){
+                    carts = [{
+                        product_id: product_id,
+                        product_img: product_img,
+                        product_price: product_price,
+                        quantity: 1,
+                    }]
+                }else if(positionThisProductInCart < 0){ 
+                    carts.push({
+                        product_id: product_id,
+                        product_img: product_img,
+                        product_price: product_price,
+                        quantity: 1
+                    })
+                }else{
+                    carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
+                }
+                addCartToHTML();
+                addCartToMemory();
+            }
+
+            const addCartToMemory = () => {
+                localStorage.setItem('cart', JSON.stringify(carts));
+            }
+
+            const addCartToHTML = () => {
+                listCartHTML.innerHTML =``;
+                let totalQuantity = 0;
+                let totalMoney = 0;
+
+                if(carts.length > 0){
+                    carts.forEach(cart=> {
+                        totalQuantity = totalQuantity + cart.quantity;
+                        let newCart = document.createElement('div');
+                        newCart.classList.add('item');
+                        newCart.dataset.id = cart.product_id;
+                        let positionProduct = listProducts.findIndex((value) => value.img_id == cart.product_id.toLowerCase());
+                        // console.log(positionProduct);
+                        let info = listProducts[positionProduct];
+                        let totalPrice = cart.product_price * cart.quantity; 
+                        totalMoney = totalMoney + totalPrice
+                        total_money.innerText = `${totalMoney} RS`;
+                        newCart.innerHTML = `
+                        <div class="image">
+                        <img src="${cart.product_img}" alt="">
+                            </div>
+                            <div class="name">
+                                ${cart.product_id}
+                            </div>
+                            <div class="totalPrice">
+                            RS ${totalPrice}
+                            </div>
+                            <div class="quantity">
+                                <span class="minus"><</span>
+                                <span>${cart.quantity}</span>
+                                <span class="plus">></span>
+                            </div>
+                            `;
+                    // console.log(newCart.innerHTML)
+                    listCartHTML.appendChild(newCart);
+                    })
+                }
+                else{
+                    total_money.innerText = `0 RS`;
+                }
+                iconCartSpan.innerText = totalQuantity;
+            }
+            listCartHTML.addEventListener('click', (event) => {
+                let positionClick = event.target;
+                if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
+                    let product_id = positionClick.parentElement.parentElement.dataset.id;
+                    // console.log(product_id);
+                    let type = 'minus';
+                    if(positionClick.classList.contains('plus')){
+                        type = 'plus';
+                    }
+                    changeQuantity(product_id, type);
+                }
+            })
+
+            const changeQuantity = (product_id, type) => {
+                let positionItemInCart = carts.findIndex((value) => value.product_id == product_id);
+                if(positionItemInCart => 0){
+                    switch (type) {
+                        case 'plus':
+                            carts[positionItemInCart].quantity = carts[positionItemInCart].quantity + 1;
+                            break;
+                        default:
+                            let valueChange = carts[positionItemInCart].quantity - 1;
+                            if(valueChange > 0){
+                                carts[positionItemInCart].quantity = valueChange;
+                            }else{
+                                carts.splice(positionItemInCart, 1);
+                            }
+                            break;
+                    }
+                }
+                addCartToMemory();
+                addCartToHTML();
+            }
+            
+            const  initApp=  async() => {
+                // let response = await fetch('../../api_building/api.php');
+                // console.log(response);  //json format
+                // data = await response.json();
+                // // console.log(data[0].img_src);
+                // listProducts = await data;
+                //     console.log(listProducts);
+                // await addDataToHTML();
+
+                // get cart from memory
+                if(localStorage.getItem('cart')){
+                    carts = JSON.parse(localStorage.getItem('cart'));
+                    addCartToHTML();
+                }
+            }
+            initApp();
+
+
+        </script>
+        <script src="Java_script/bigImage.js"></script>
+        <script src="Java_script/search.js"></script>
+        <script src="Java_script/login_js.js"></script>
+        <script src="Java_script/burger.js"></script>
+        <script src="Java_script/preloader.js"></script>
+        <script src="java_script/popup.js"></script>
+
+    </body>
+</html>   
