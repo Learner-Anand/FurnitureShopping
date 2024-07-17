@@ -1,6 +1,6 @@
 <?php 
 // connect to mysql database
-$conn = new mysqli("localhost","root","","sign_in_data");
+$conn = new mysqli("bd09ybkhu3grbxzuqmz2-mysql.services.clever-cloud.com","bd09ybkhu3grbxzuqmz2","9UHn4cWH36BcF382LcKS","sign_in_data");
 
 // check connection
 if($conn->connect_error){
