@@ -53,7 +53,7 @@ else if(catName == "Window"){
 // Api Calling for fetch data from database
 const apiCalling = async () => {
     // console.log("getting data....");
-    let response = await fetch('../../api_building/api.php?categoryType='+catName);
+    let response = await fetch('../api_building/api.php?categoryType='+catName);
     console.log(response);  //json format
     data = await response.json();
     // console.log(data[0].img_src);
