@@ -7,10 +7,10 @@ const searchIcon = document.querySelector(".searchIcon");
 let lisTProducts = [];
 let image_src = [];
 const apiCalling = async () => {
-  let response = await fetch("../../api_building/api.php?categoryType=img_id");
+  let response = await fetch("../api_building/api.php?categoryType=img_id");
   lisTProducts = await response.json();
 
-  let src_fetch  = await fetch("../../api_building/api.php?categoryType=search");
+  let src_fetch  = await fetch("../api_building/api.php?categoryType=search");
   image_src = await src_fetch.json();
   
   // data = await response.json();
